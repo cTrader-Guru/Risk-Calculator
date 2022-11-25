@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using cAlgo.API;
 using cTrader.Guru.Helper;
@@ -36,7 +36,7 @@ namespace cAlgo.Indicators
 
         public const string NAME = "Risk Calculator";
 
-        public const string VERSION = "1.0.3";
+        public const string VERSION = "1.0.4";
 
         #endregion
 
@@ -78,7 +78,7 @@ namespace cAlgo.Indicators
             if (IsLastBar)
             {
 
-                string info = String.Format("{0} ({1} pips)", SymbolName, PipsRisk);
+                string info = String.Format("{0} ({1} / {2} pips)", SymbolName, CapitalRisk.ToString(), PipsRisk);
 
                 double myCapitalRisk = _getMyCapital(CapitalRisk);
 
